@@ -1,8 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDeleteJobMutation } from "../../features/apiSlice";
 
 const DetailView = ({ detail }) => {
+  const navigate = useNavigate();
   const { title, company, salary, id, deadline, type } = detail;
+  const [deleteJob, { isLoading, isError, isSuccess }] = useDeleteJobMutation();
+  //handle Delete:
+  const handleDelete = e => {
+    e.preventDefault();
+    deleteJob(id);
+  };
+  useEffect(() => {
+    {
+      isSuccess && navigate("/");
+    }
+  }, [isSuccess]);
   return (
     <div className="">
       <nav className="navbar bg-light ">
@@ -39,20 +52,20 @@ const DetailView = ({ detail }) => {
             Deadline: {deadline}
           </p>
 
-       <div className="d-flex mt-5">
-       <Link
-            to={`/jobs/detail/${id}`}
-            className="btn btn-success w-100 m-2"
-          >
-            Update
-          </Link>
-          <Link
-            to={`/jobs/detail/${id}`}
-            className="btn btn-danger w-100 m-2"
-          >
-            Delete
-          </Link>
-       </div>
+          <div className="d-flex mt-5">
+            <Link
+              to={`/jobs/detail/${id}`}
+              className="btn btn-success w-100 m-2"
+            >
+              Update
+            </Link>
+            <button
+              className="btn btn-danger w-100 m-2"
+              onClick={handleDelete}
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>
