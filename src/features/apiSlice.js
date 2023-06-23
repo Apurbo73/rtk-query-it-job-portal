@@ -17,8 +17,15 @@ export const apiSlice = createApi({
         body: data
       }),
       invalidatesTags: ["Jobs"]
+    }),
+    seeDetail: builder.query({
+      query: id => `/jobs/${id}`
     })
   })
 });
 
-export const { useGetAllJobsQuery, useAddJobMutation } = apiSlice;
+export const {
+  useGetAllJobsQuery,
+  useAddJobMutation,
+  useSeeDetailQuery
+} = apiSlice;

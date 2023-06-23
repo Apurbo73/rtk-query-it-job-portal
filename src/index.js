@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Addjob from "./components/AddJob/Addjob";
+import Detail from "./components/Detail/Detail";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -17,7 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/jobs/add" element={<Addjob />} />
-
+        <Route path="/jobs/detail/:id" element={<Detail />} />
       </Routes>
     </Provider>
   </BrowserRouter>

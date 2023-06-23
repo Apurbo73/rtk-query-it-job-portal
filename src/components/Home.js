@@ -25,9 +25,13 @@ const Home = ({ allJobs }) => {
     <div>
       <nav className="navbar bg-light fixed-top">
         <div className="container-fluid">
-          <h5 className="navbar-brand">IT JOB PORTAL</h5>
+          <Link to="/" className="navbar-brand">
+            IT JOB PORTAL
+          </Link>
           <form className="d-flex" role="search">
-            <Link to={`/jobs/add`} className="btn btn-success">Post Job</Link>
+            <Link to={`/jobs/add`} className="btn btn-success">
+              Post Job
+            </Link>
             {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
           </form>
         </div>

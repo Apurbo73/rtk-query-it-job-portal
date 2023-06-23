@@ -26,7 +26,7 @@ const Job = ({ job }) => {
             Deadline: {deadline}
           </p>
 
-          <Link to="#" className="btn btn-outline-dark w-100">
+          <Link to={`/jobs/detail/${id}`} className="btn btn-outline-dark w-100">
             See more
           </Link>
         </div>
