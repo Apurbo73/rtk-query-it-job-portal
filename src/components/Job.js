@@ -1,13 +1,14 @@
 import React from "react";
-
 const Job = ({ job }) => {
-  const { title, type, salary, deadline, id } = job;
+  const { title, type, salary, deadline, id, company } = job;
 
   return (
     <div>
-      <div className="card m-2" style={{ width: "18rem" }}>
-        {/* <img src="..." className="card-img-top" alt="..." /> */}
-        <div className="card-body">
+      <div
+        className="card m-2 shadow-lg p-3 mb-5 bg-body rounded"
+        style={{ width: "18rem" }}
+      >
+        <div className={`card-body ${type}`}>
           <h5 className="card-title">
             {title}
           </h5>
@@ -17,10 +18,14 @@ const Job = ({ job }) => {
           <p className="card-text mb-2">
             Salary: {salary}
           </p>
-          <p className="card-text mb-5">
+          <h6 className="card-text mb-2">
+            Company: {company}
+          </h6>
+          <p className="card-text mb-">
             Deadline: {deadline}
           </p>
-          <a href="#" className="btn btn-success w-100">
+
+          <a href="#" className="btn btn-dark w-100">
             See more
           </a>
         </div>
