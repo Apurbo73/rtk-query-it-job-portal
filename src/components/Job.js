@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   const { title, type, salary, deadline, id, company } = job;
 
@@ -25,9 +26,9 @@ const Job = ({ job }) => {
             Deadline: {deadline}
           </p>
 
-          <a href="#" className="btn btn-dark w-100">
+          <Link to="#" className="btn btn-outline-dark w-100">
             See more
-          </a>
+          </Link>
         </div>
       </div>
     </div>

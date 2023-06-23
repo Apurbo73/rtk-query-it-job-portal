@@ -4,7 +4,7 @@ const Search = props => {
   const [searchText, setSearchText] = useState("");
   useEffect(() => {
     props.onSearch(searchText);
-  }, [searchText]);
+  }, [searchText,props]);
   return (
     <div className="mt-4 mb-4  w-25 mx-auto pt-5">
       <input

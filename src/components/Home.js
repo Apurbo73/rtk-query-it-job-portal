@@ -3,6 +3,7 @@ import Search from "./Search";
 import Jobs from "./Jobs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 const Home = ({ allJobs }) => {
   const [allJobsData, setAllJobs] = useState(allJobs);
   const [filterJobs, setFilterJobs] = useState(allJobs);
@@ -22,11 +23,22 @@ const Home = ({ allJobs }) => {
 
   return (
     <div>
-      <nav className="fixed-top bg-dark text-light p-2 mb-5">
-        <h4> It Jobs Portal</h4>
-        <ToastContainer />
+      <nav className="navbar bg-light fixed-top">
+        <div className="container-fluid">
+          <h5 className="navbar-brand">IT JOB PORTAL</h5>
+          <form className="d-flex" role="search">
+            <Link to={`/jobs/add`} className="btn btn-success">Post Job</Link>
+            {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
+          </form>
+        </div>
       </nav>
-      <Search onSearch={handleSearch} />
+
+      <div>
+        <div />
+        <div className="  m-4">
+          <Search onSearch={handleSearch} />
+        </div>
+      </div>
       {allJobsData && <Jobs jobs={filterJobs} />}
     </div>
   );

@@ -4,11 +4,21 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3001"
   }),
+  tagTypes: ["Jobs"],
   endpoints: builder => ({
     getAllJobs: builder.query({
-      query: () => "/jobs"
+      query: () => "/jobs",
+      providesTags: ["Jobs"]
+    }),
+    addJob: builder.mutation({
+      query: data => ({
+        url: `/jobs`,
+        method: "POST",
+        body: data
+      }),
+      invalidatesTags: ["Jobs"]
     })
   })
 });
 
-export const {useGetAllJobsQuery} = apiSlice;
+export const { useGetAllJobsQuery, useAddJobMutation } = apiSlice;

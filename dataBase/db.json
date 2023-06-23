@@ -50,7 +50,7 @@
     },
     {
       "title": "Game Developer",
-      "type": "Internship",
+      "type": "Remote",
       "salary": "18000",
       "deadline": "2023-12-31",
       "company": "Inverse AI",
@@ -71,6 +71,54 @@
       "company": "Authlab",
       "deadline": "2023-12-31",
       "id": 9
+    },
+    {
+      "title": "Web Developer",
+      "type": "Full-Time",
+      "salary": "40000",
+      "company": "Amigo's Outlet",
+      "deadline": "30.06.2023",
+      "id": 10
+    },
+    {
+      "title": "Game Developer",
+      "type": "Remote",
+      "salary": "35000",
+      "company": "Dorik",
+      "deadline": "30.06.2023",
+      "id": 11
+    },
+    {
+      "title": "abc@gmail.com",
+      "type": "Remote",
+      "salary": "abc@gmail.com",
+      "company": "abc@gmail.com",
+      "deadline": "abc@gmail.com",
+      "id": 12
+    },
+    {
+      "title": "abc@gmail.com",
+      "type": "Internship",
+      "salary": "abc@gmail.com",
+      "company": "abc@gmail.com",
+      "deadline": "abc@gmail.com",
+      "id": 13
+    },
+    {
+      "title": "abc@gmail.com",
+      "type": "abc@gmail.com",
+      "salary": "abc@gmail.com",
+      "company": "abc@gmail.com",
+      "deadline": "abc@gmail.com",
+      "id": 14
+    },
+    {
+      "title": "ok",
+      "type": "Remote",
+      "salary": "abc@gmail.com",
+      "company": "abc@gmail.com",
+      "deadline": "abc@gmail.com",
+      "id": 15
     }
   ]
 }
