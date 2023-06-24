@@ -8,6 +8,7 @@ import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Addjob from "./components/AddJob/Addjob";
 import Detail from "./components/Detail/Detail";
+import Update from "./components/update/Update";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -19,6 +20,9 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/jobs/add" element={<Addjob />} />
         <Route path="/jobs/detail/:id" element={<Detail />} />
+        <Route path="/jobs/detail/:id" element={<Detail />} />
+        <Route path="/jobs/update/:id" element={<Update />} />
+
       </Routes>
     </Provider>
   </BrowserRouter>

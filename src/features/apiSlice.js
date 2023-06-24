@@ -28,6 +28,14 @@ export const apiSlice = createApi({
         method: "DELETE"
       }),
       invalidatesTags: ["Jobs", "Detail"]
+    }),
+    updateJob: builder.mutation({
+      query: ({ id, data }) => ({
+        url: `/jobs/${id}`,
+        method: "PATCH",
+        body: data
+      }),
+      invalidatesTags: ["Jobs", "Detail"]
     })
   })
 });
@@ -36,5 +44,6 @@ export const {
   useGetAllJobsQuery,
   useAddJobMutation,
   useSeeDetailQuery,
-  useDeleteJobMutation
+  useDeleteJobMutation,
+  useUpdateJobMutation
 } = apiSlice;

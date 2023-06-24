@@ -66,7 +66,7 @@
     },
     {
       "title": "Web Developer",
-      "type": "Full-Time",
+      "type": "Internship",
       "salary": "40000",
       "company": "Amigo's Outlet",
       "deadline": "30.06.2023",
@@ -79,6 +79,14 @@
       "company": "Dorik",
       "deadline": "30.06.2023",
       "id": 11
+    },
+    {
+      "title": "Software Engineer",
+      "type": "Full-Time",
+      "salary": "55000",
+      "company": "Ceffalo Bangladesh",
+      "deadline": "15.07.23",
+      "id": 12
     }
   ]
 }

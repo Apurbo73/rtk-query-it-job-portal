@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDeleteJobMutation } from "../../features/apiSlice";
-
+import { AiFillEdit } from "react-icons/ai";
+import { RiDeleteBin5Line } from "react-icons/ri";
 const DetailView = ({ detail }) => {
   const navigate = useNavigate();
   const { title, company, salary, id, deadline, type } = detail;
@@ -11,11 +12,14 @@ const DetailView = ({ detail }) => {
     e.preventDefault();
     deleteJob(id);
   };
-  useEffect(() => {
-    {
-      isSuccess && navigate("/");
-    }
-  }, [isSuccess]);
+  useEffect(
+    () => {
+      {
+        isSuccess && navigate("/");
+      }
+    },
+    [isSuccess]
+  );
   return (
     <div className="">
       <nav className="navbar bg-light ">
@@ -53,17 +57,11 @@ const DetailView = ({ detail }) => {
           </p>
 
           <div className="d-flex mt-5">
-            <Link
-              to={`/jobs/detail/${id}`}
-              className="btn btn-success w-100 m-2"
-            >
-              Update
+            <Link to={`/jobs/update/${id}`} className="btn btn-outline-dark font-2xl  w-100 m-2">
+              <AiFillEdit />
             </Link>
-            <button
-              className="btn btn-danger w-100 m-2"
-              onClick={handleDelete}
-            >
-              Delete
+            <button className="btn btn-outline-dark w-100 m-2" onClick={handleDelete}>
+              <RiDeleteBin5Line />
             </button>
           </div>
         </div>
