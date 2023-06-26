@@ -4,7 +4,7 @@
       "title": "DevOps Engineer",
       "type": "Internship",
       "salary": "25002",
-      "deadline": "2024-12-31",
+      "deadline": "2023-12-31",
       "company": "Dorik",
       "id": 1
     },
@@ -87,6 +87,14 @@
       "company": "Ceffalo Bangladesh",
       "deadline": "15.07.23",
       "id": 12
+    },
+    {
+      "title": "Software Engineer",
+      "type": "Remote",
+      "salary": "55000",
+      "company": "Ceffalo Bangladesh",
+      "deadline": "15.07.23",
+      "id": 13
     }
   ]
 }

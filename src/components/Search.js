@@ -6,7 +6,8 @@ const Search = props => {
     props.onSearch(searchText);
   }, [searchText,props]);
   return (
-    <div className="mt-4 mb-4  w-25 mx-auto pt-5">
+<div className="mx-auto container w-50">
+<div className="mt-4 mb-4   pt-5">
       <input
         className="text-center  rounded"
         type="text"
@@ -17,6 +18,7 @@ const Search = props => {
         }}
       />
     </div>
+</div>
   );
 };
 

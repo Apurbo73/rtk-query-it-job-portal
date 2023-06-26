@@ -4,12 +4,12 @@ const Job = ({ job }) => {
   const { title, type, salary, deadline, id, company } = job;
 
   return (
-    <div>
+    <div className="mx-auto">
       <div
-        className="card m-2 shadow-lg p-3 mb-5 bg-body rounded"
+        className="card m-2 shadow-lg p-3 mb-5 bg-body rounded "
         style={{ width: "18rem" }}
       >
-        <div className={`card-body ${type}`}>
+        <div className={`card-body ${type} `}>
           <h5 className="card-title">
             {title}
           </h5>

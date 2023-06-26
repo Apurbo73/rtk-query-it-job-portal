@@ -20,7 +20,12 @@ const Home = ({ allJobs }) => {
     setFilterJobs(SearchedJobs);
   };
   // toast("Same category jobs are in same color");
-
+  // control filter menu item show:
+  const [show, setShow] = useState(false);
+  // handle Menu Show:
+  // const handleMenuShow = () => {
+  //   setShow(!show);
+  // };
   return (
     <div>
       <nav className="navbar bg-light fixed-top">
@@ -39,9 +44,20 @@ const Home = ({ allJobs }) => {
 
       <div>
         <div />
-        <div className="  m-4">
-          <Search onSearch={handleSearch} />
-        </div>
+
+        <Search onSearch={handleSearch} />
+        {/* <div onClick={handleMenuShow}>
+          <button>Select category</button>
+          {show &&
+            <div>
+              {show &&
+                <div>
+                  <p>okay</p>
+                  <p>okay</p>
+                  <p>okay</p>
+                </div>}
+            </div>}
+        </div> */}
       </div>
       {allJobsData && <Jobs jobs={filterJobs} />}
     </div>
